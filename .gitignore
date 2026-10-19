@@ -1,0 +1,6 @@
+# Local deployment cache (contains a temporary Vercel token — never commit)
+.vercel/
+
+# OS junk
+.DS_Store
+Thumbs.db

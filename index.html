@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dairy Book — Simple dairy management for every dairy owner</title>
+  <meta name="description" content="My Dairy Book is a complete dairy management app for milk collection, FAT/SNF rate charts, deliveries, sales, payments, bills, stock and reports. Available in 13 Indian languages.">
+  <meta name="theme-color" content="#2F8A2A">
+  <meta property="og:title" content="My Dairy Book — Your entire dairy, in one simple book">
+  <meta property="og:description" content="Collect milk, calculate rates, manage farmers and customers, print bills and understand your profit — all from your phone.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/app_icon.png">
+  <link rel="icon" href="assets/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="My Dairy Book home">
+        <img src="assets/app_icon.png" alt="" class="brand-mark">
+        <span class="brand-text">
+          <strong>My Dairy Book</strong>
+          <span>Dairy management, simplified</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#who-its-for">For your dairy</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost desktop-only" href="#contact">Contact</a>
+        <span class="btn btn-primary btn-coming-soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon"><path d="M3.6 2.4 13.9 12 3.6 21.6c-.4-.3-.6-.8-.6-1.3V3.7c0-.5.2-1 .6-1.3Zm11.7 10.9 2.6 2.6-11.4 6.3 8.8-8.9Zm0-2.6L6.5 1.8l11.4 6.3-2.6 2.6Zm1.4 1.3 5-2.7c.7-.4.7-1.4 0-1.8l-2.4-1.3-2.6 2.6 2.6 2.6-2.6.6Z"/></svg>
+          Coming soon
+        </span>
+        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#who-its-for">For your dairy</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Built for Indian dairy owners</span>
+          <h1>Your entire dairy,<br><span class="grad-text">in one simple book.</span></h1>
+          <p class="hero-lead">
+            Collect milk, calculate FAT / SNF rates, track farmers and customers, record sales and payments,
+            print bills and see your real profit — from one clean app on your phone.
+          </p>
+
+          <div class="hero-actions">
+            <span class="btn btn-primary btn-lg btn-coming-soon">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon"><path d="M3.6 2.4 13.9 12 3.6 21.6c-.4-.3-.6-.8-.6-1.3V3.7c0-.5.2-1 .6-1.3Zm11.7 10.9 2.6 2.6-11.4 6.3 8.8-8.9Zm0-2.6L6.5 1.8l11.4 6.3-2.6 2.6Zm1.4 1.3 5-2.7c.7-.4.7-1.4 0-1.8l-2.4-1.3-2.6 2.6 2.6 2.6-2.6.6Z"/></svg>
+              Coming soon
+            </span>
+            <a class="btn btn-outline btn-lg" href="#features">
+              Explore features
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-avatars" aria-hidden="true">
+              <span>₹</span><span>🥛</span><span>📈</span>
+            </div>
+            <p><strong>Made for daily use.</strong> Works in 13 Indian languages · Android</p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="phone-frame">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-screen">
+              <div class="app-topbar">
+                <div>
+                  <span class="app-overline">SHRI DAIRY</span>
+                  <strong>Namaste, Ramesh</strong>
+                </div>
+                <span class="app-avatar">RK</span>
+              </div>
+              <div class="profit-card">
+                <span class="profit-label">TODAY'S PROFIT</span>
+                <strong class="profit-value">₹ 4,280</strong>
+                <div class="profit-split">
+                  <span><small>Sales</small><b>₹ 9,450</b></span>
+                  <span><small>Milk</small><b>₹ 4,120</b></span>
+                  <span><small>Costs</small><b>₹ 1,050</b></span>
+                </div>
+              </div>
+              <div class="app-section-title">TODAY'S BUSINESS</div>
+              <div class="app-metrics">
+                <div class="app-metric"><span class="metric-icon green">🥛</span><b>186 L</b><small>Milk collected</small></div>
+                <div class="app-metric"><span class="metric-icon blue">🚚</span><b>172 L</b><small>Milk sold</small></div>
+                <div class="app-metric"><span class="metric-icon amber">🧾</span><b>₹ 9,450</b><small>Sales</small></div>
+                <div class="app-metric"><span class="metric-icon pink">👥</span><b>12</b><small>Deliveries</small></div>
+              </div>
+              <div class="app-actions">
+                <div><span>🥛</span><small>Collect</small></div>
+                <div><span>🛒</span><small>Sell</small></div>
+                <div><span>👤</span><small>Farmer</small></div>
+                <div><span>📊</span><small>Reports</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-card float-a">
+            <span class="float-icon">✓</span>
+            <div><strong>Rate chart matched</strong><small>FAT 4.2 · SNF 8.6 → ₹42/L</small></div>
+          </div>
+          <div class="float-card float-b">
+            <span class="float-icon blue">↗</span>
+            <div><strong>Customer balance</strong><small>₹ 2,450 received today</small></div>
+          </div>
+          <div class="hero-ring" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="container stats-strip reveal">
+        <div class="stat"><strong>13</strong><span>Indian languages</span></div>
+        <div class="stat"><strong>4</strong><span>milk rate methods</span></div>
+        <div class="stat"><strong>12</strong><span>quick actions</span></div>
+        <div class="stat"><strong>1</strong><span>book for everything</span></div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST BAR ================= -->
+    <section class="logo-strip" aria-label="What My Dairy Book covers">
+      <div class="container logo-strip-inner">
+        <span>Milk collection</span><i></i>
+        <span>FAT / SNF charts</span><i></i>
+        <span>Delivery routes</span><i></i>
+        <span>Bills &amp; UPI QR</span><i></i>
+        <span>Profit reports</span><i></i>
+        <span>Stock &amp; staff</span>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Everything in one place</span>
+          <h2>Run the whole dairy<br>without a pile of registers.</h2>
+          <p>From the morning milk round to the evening cash count, My Dairy Book keeps every number connected.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l1 4-2 2v10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9L7 7l1-4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 7h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Milk collection</h3>
+            <p>Record morning and evening collections by farmer, shift, milk type, quantity, FAT, SNF and CLR in seconds.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16v-5M12 16V7M16 16v-3M20 16V9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Smart rate charts</h3>
+            <p>Set FAT-only, FAT + SNF or FAT + CLR charts. Get the right rate for every reading, rounded your way.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <h3>Deliveries &amp; routes</h3>
+            <p>Plan delivery routes, daily quantities and skip days. Mark completed stops or record a cancellation with a reason.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v18l-5-3-5 3V3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.5 8.5h5M9.5 12h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Farmers &amp; customers</h3>
+            <p>Complete profiles with codes, phones, villages, bank/UPI details, opening balances and ledger history.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v11H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 10h16M8 15h3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M7 7V5h10v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Payments &amp; ledgers</h3>
+            <p>Pay farmers, collect from customers and settle suppliers. Every payment updates the balance automatically.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10H4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 13h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Monthly bills</h3>
+            <p>Create customer bills with your logo, UPI QR, milk and product lines. Share or print a clean PDF.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6M4 18h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m7 14 4-4 3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Reports &amp; closing</h3>
+            <p>Daily profit, cash flow, milk trends, expenses and period reports — plus a daily cash count to catch differences.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4-8 4-8-4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4 12 8 4 8-4M4 16l8 4 8-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Products &amp; stock</h3>
+            <p>Manage ghee, paneer, curd and more. Stock movements for purchases, sales, wastage, damage and expiry.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M4 7h16v13H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 12h16M10 12v2h4v-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Suppliers, expenses &amp; staff</h3>
+            <p>Track packaging, feed and other purchases, salaries and daily expenses. See exactly where the money goes.</p>
+          </article>
+        </div>
+
+        <div class="feature-extra reveal">
+          <div class="feature-extra-copy">
+            <span class="mini-label">Small details that save time</span>
+            <h3>Voice entry. Rate-chart scanning. Instant search.</h3>
+            <p>Speak a collection in Hindi or English, scan a printed rate chart with your camera, and search any farmer, customer, bill or payment in one tap.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">🎙️ Voice entry</span>
+            <span class="chip">📷 Chart OCR</span>
+            <span class="chip">🔍 Global search</span>
+            <span class="chip">🔔 Smart alerts</span>
+            <span class="chip">📤 PDF &amp; sharing</span>
+            <span class="chip">🌐 13 languages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> How it works</span>
+          <h2>Set up once.<br>Use it every day.</h2>
+          <p>No complicated training. If you can use a phone, you can run your dairy on My Dairy Book.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon">📱</div>
+            <h3>Sign in with your mobile</h3>
+            <p>Log in securely with your phone number and a one-time password. Your account keeps your dairy data separate.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">02</span>
+            <div class="step-icon">🏡</div>
+            <h3>Add your dairy profile</h3>
+            <p>Enter your dairy name, address, business type, currency, milk unit, GSTIN and UPI ID.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">03</span>
+            <div class="step-icon">👥</div>
+            <h3>Add farmers &amp; customers</h3>
+            <p>Import your existing register by adding people once. Opening balances carry over from your old book.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">04</span>
+            <div class="step-icon">📈</div>
+            <h3>Record, bill &amp; grow</h3>
+            <p>Collect milk, sell products, take payments and open reports whenever you need the full picture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHO IT'S FOR ================= -->
+    <section class="section" id="who-its-for">
+      <div class="container split-grid">
+        <div class="split-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Made for your kind of dairy</span>
+          <h2>Whether you collect, sell<br>or deliver milk.</h2>
+          <p>My Dairy Book adapts to the way your dairy actually works. Choose your business type and the app keeps the right numbers in front of you.</p>
+          <ul class="check-list">
+            <li><span>✓</span> Collection centres buying milk from farmers</li>
+            <li><span>✓</span> Dairy shops selling milk and products</li>
+            <li><span>✓</span> Milk delivery businesses with routes</li>
+            <li><span>✓</span> Dairy farms managing their own herd</li>
+            <li><span>✓</span> Collection + retail shops</li>
+          </ul>
+        </div>
+
+        <div class="audience-grid reveal">
+          <div class="audience-card">
+            <span>🥛</span>
+            <h3>Collection centre</h3>
+            <p>Farmer-wise milk entries, rate charts and payable ledgers.</p>
+          </div>
+          <div class="audience-card">
+            <span>🏪</span>
+            <h3>Dairy shop</h3>
+            <p>Counter sales, product stock and customer balances.</p>
+          </div>
+          <div class="audience-card">
+            <span>🛵</span>
+            <h3>Milk delivery</h3>
+            <p>Routes, daily quantities and monthly customer bills.</p>
+          </div>
+          <div class="audience-card">
+            <span>🐄</span>
+            <h3>Dairy farm</h3>
+            <p>Milk production, feed costs and complete profitability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LANGUAGES ================= -->
+    <section class="section section-dark" id="languages">
+      <div class="container languages-grid">
+        <div class="reveal">
+          <span class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Your language, your dairy</span>
+          <h2>Use it in the language<br>you think in.</h2>
+          <p class="light-text">The whole app — buttons, forms, reports and messages — is translated. Voice entry understands Indian numbers and names across scripts.</p>
+          <div class="language-tags">
+            <span>English</span><span>हिंदी</span><span>हरियाणवी</span><span>राजस्थानी</span>
+            <span>বাংলা</span><span>ਪੰਜਾਬੀ</span><span>ગુજરાતી</span><span>मराठी</span>
+            <span>ଓଡ଼ିଆ</span><span>తెలుగు</span><span>ಕನ್ನಡ</span><span>தமிழ்</span>
+            <span>മലയാളം</span><span>اردو</span>
+          </div>
+        </div>
+
+        <div class="language-visual reveal">
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p>गाय का दूध 4.2 फैट, 8.6 एसएनएफ — 42 रुपये प्रति लीटर</p>
+            <span class="quote-caption">Say it. The app fills it in.</span>
+          </div>
+          <div class="quote-card quote-card-small">
+            <div class="voice-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p>Voice entry in Hindi &amp; English</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECURITY ================= -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Private by design</span>
+          <h2>Your dairy numbers<br>belong to you.</h2>
+          <p>We do not sell your data, show you ads or use your business records to train public AI models. Your account is protected and your records are separated from every other dairy.</p>
+        </div>
+
+        <div class="security-grid">
+          <article class="security-card reveal">
+            <span class="security-icon">🔐</span>
+            <h3>Secure sign-in</h3>
+            <p>Mobile number + OTP authentication through Firebase Authentication. No passwords to remember or leak.</p>
+          </article>
+          <article class="security-card reveal">
+            <span class="security-icon">🗂️</span>
+            <h3>Your data stays yours</h3>
+            <p>Every farmer, customer, sale and payment is tied to your account ID, so one dairy never sees another dairy's records.</p>
+          </article>
+          <article class="security-card reveal">
+            <span class="security-icon">🔒</span>
+            <h3>Encrypted in transit</h3>
+            <p>Data travels over encrypted HTTPS connections to Firebase and Google Cloud infrastructure.</p>
+          </article>
+          <article class="security-card reveal">
+            <span class="security-icon">🗑️</span>
+            <h3>Delete when you want</h3>
+            <p>Ask us to delete your account and business data. We verify the request and remove your records from active systems.</p>
+          </article>
+        </div>
+
+        <div class="permissions-card reveal">
+          <h3>Permissions the app may ask for — and why</h3>
+          <div class="permissions-grid">
+            <div><strong>Camera</strong><span>Scan rate charts, QR codes and receipt photos.</span></div>
+            <div><strong>Photos &amp; files</strong><span>Attach a farmer/customer photo, product image or expense receipt.</span></div>
+            <div><strong>Microphone</strong><span>Voice entry for milk collections. Audio is handled by your device's speech service.</span></div>
+            <div><strong>Internet</strong><span>Sign in and sync your dairy records securely.</span></div>
+            <div><strong>Notifications</strong><span>Optional reminders and business alerts.</span></div>
+            <div><strong>Storage</strong><span>Save and share bills, PDFs and CSV files you create.</span></div>
+          </div>
+        </div>
+
+        <div class="datasafety-card reveal">
+          <div class="datasafety-head">
+            <span class="security-icon">📋</span>
+            <div>
+              <h3>Data safety at a glance</h3>
+              <p>A plain-language summary of how the app handles data, aligned with the Google Play Data safety section.</p>
+            </div>
+          </div>
+          <div class="datasafety-grid">
+            <div><strong>Personal info</strong><span>Name, phone number and address are collected to create and manage your dairy account.</span></div>
+            <div><strong>Financial info</strong><span>Milk rates, payments, balances and expenses you enter are stored to run your ledgers and reports.</span></div>
+            <div><strong>Photos</strong><span>Only the photos you choose to add (profiles, products, receipts) are stored with your account.</span></div>
+            <div><strong>Audio</strong><span>Voice entry uses your device's speech service. Raw audio is not stored on our servers.</span></div>
+            <div><strong>App activity</strong><span>Basic diagnostics and usage data help us fix problems and improve the app.</span></div>
+            <div><strong>Sharing</strong><span>We do not sell your data or share it for advertising. Only service providers listed in the Privacy Policy process it for us.</span></div>
+            <div><strong>Security</strong><span>Data is encrypted in transit. Access is restricted to your signed-in account.</span></div>
+            <div><strong>Deletion</strong><span>You can request account and data deletion at any time. See the Data Deletion page, linked in the footer.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Common questions</span>
+          <h2>Good to know<br>before you start.</h2>
+          <p>Still have a question? Write to us at <a href="mailto:mydairybook01@gmail.com">mydairybook01@gmail.com</a>.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>Is My Dairy Book free?</summary>
+            <p>Yes. The app is currently free to download and use. If paid plans are introduced, the price will be shown before you buy.</p>
+          </details>
+          <details>
+            <summary>Does it work without internet?</summary>
+            <p>You need an internet connection to sign in and save your records to your account. Some parts of the app keep recent data on your phone, but a connection is recommended for reliable syncing.</p>
+          </details>
+          <details>
+            <summary>Can I use it for both cow and buffalo milk?</summary>
+            <p>Yes. You can set separate rates and rate charts for cow and buffalo milk, and choose FAT-only, FAT + SNF or FAT + CLR pricing.</p>
+          </details>
+          <details>
+            <summary>Can I print or share bills?</summary>
+            <p>Yes. Create monthly customer bills with your logo and UPI QR, then share or print them as a PDF from your phone.</p>
+          </details>
+          <details>
+            <summary>What happens to my data if I delete my account?</summary>
+            <p>Your account and linked business records are removed from active systems. Limited information may be kept where required by law. See the Data Deletion page, linked in the footer.</p>
+          </details>
+          <details>
+            <summary>Which languages are supported?</summary>
+            <p>English, Hindi, Haryanvi, Rajasthani/Marwari, Bengali, Punjabi, Gujarati, Marathi, Odia, Telugu, Kannada, Tamil, Malayalam and Urdu.</p>
+          </details>
+          <details>
+            <summary>Does the app show ads?</summary>
+            <p>No. My Dairy Book does not show third-party ads, and we do not sell your business data.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APP DETAILS ================= -->
+    <section class="section section-alt" id="app-details">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> App information</span>
+          <h2>The details,<br>at a glance.</h2>
+        </div>
+
+        <div class="details-card reveal">
+          <div class="details-row"><span>App name</span><strong>My Dairy Book</strong></div>
+          <div class="details-row"><span>Platform</span><strong>Android (Google Play)</strong></div>
+          <div class="details-row"><span>Category</span><strong>Business / Productivity</strong></div>
+          <div class="details-row"><span>Price</span><strong>Free</strong></div>
+          <div class="details-row"><span>Languages</span><strong>13 Indian languages</strong></div>
+          <div class="details-row"><span>Sign-in</span><strong>Mobile number + OTP</strong></div>
+          <div class="details-row"><span>Developer</span><strong>My Dairy Book</strong></div>
+          <div class="details-row"><span>Support email</span><strong><a href="mailto:mydairybook01@gmail.com">mydairybook01@gmail.com</a></strong></div>
+          <div class="details-row"><span>Last updated</span><strong>19 October 2026</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> We're here to help</span>
+          <h2>Questions, feedback<br>or a problem?</h2>
+          <p>Tell us what is happening with the app. Include your registered mobile number if your question is about your account, and we will get back to you.</p>
+          <div class="contact-methods">
+            <a href="mailto:mydairybook01@gmail.com" class="contact-method">
+              <span>✉️</span>
+              <div><small>Email</small><strong>mydairybook01@gmail.com</strong></div>
+            </a>
+            <div class="contact-method">
+              <span>⏱️</span>
+              <div><small>Response time</small><strong>Usually within 2 business days</strong></div>
+            </div>
+            <div class="contact-method">
+              <span>📍</span>
+              <div><small>Based in</small><strong>India</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <h3>Send us a message</h3>
+          <p class="contact-card-sub">This opens your email app with the details filled in.</p>
+          <form id="contact-form" class="contact-form" action="mailto:mydairybook01@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Ramesh Kumar" required>
+
+            <label for="phone">Registered mobile number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210">
+
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option>App support</option>
+              <option>Privacy question</option>
+              <option>Delete my account</option>
+              <option>Billing question</option>
+              <option>Feedback or suggestion</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you need help with..." required></textarea>
+
+            <button type="submit" class="btn btn-primary btn-block">Open email app</button>
+            <p class="form-note">We never ask for your OTP or password by email.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-cta">
+      <div class="container final-cta-inner reveal">
+        <div>
+          <span class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Start today</span>
+          <h2>One simple book.<br>A calmer dairy.</h2>
+          <p>Download My Dairy Book and bring your milk, money and people together.</p>
+        </div>
+        <div class="final-cta-actions">
+          <span class="btn btn-white btn-lg btn-coming-soon">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon"><path d="M3.6 2.4 13.9 12 3.6 21.6c-.4-.3-.6-.8-.6-1.3V3.7c0-.5.2-1 .6-1.3Zm11.7 10.9 2.6 2.6-11.4 6.3 8.8-8.9Zm0-2.6L6.5 1.8l11.4 6.3-2.6 2.6Zm1.4 1.3 5-2.7c.7-.4.7-1.4 0-1.8l-2.4-1.3-2.6 2.6 2.6 2.6-2.6.6Z"/></svg>
+            Coming soon
+          </span>
+          <a class="btn btn-outline-light btn-lg" href="mailto:mydairybook01@gmail.com">Talk to us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="assets/app_icon.png" alt="" class="brand-mark">
+          <span class="brand-text"><strong>My Dairy Book</strong><span>Dairy management, simplified</span></span>
+        </a>
+        <p>A complete dairy management app for milk collection, sales, payments, stock, bills and reports — built for Indian dairy owners.</p>
+        <a class="footer-email" href="mailto:mydairybook01@gmail.com">mydairybook01@gmail.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#who-its-for">For your dairy</a>
+        <a href="#languages">Languages</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="data-deletion.html">Data deletion</a>
+        <a href="terms-of-service.html">Terms of service</a>
+        <a href="billing-refunds.html">Billing &amp; refunds</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="#security">Data safety</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#contact">Contact us</a>
+        <a href="#app-details">App details</a>
+        <a href="mailto:mydairybook01@gmail.com">Email support</a>
+        <span class="footer-coming-soon">Google Play — coming soon</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 My Dairy Book. All rights reserved.</p>
+      <p>Made in India for dairy owners · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a></p>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
