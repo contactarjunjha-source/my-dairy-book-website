@@ -7,3 +7,6 @@ Thumbs.db
 
 # GitHub Pages build output
 _site/
+
+# Firebase CLI cache
+.firebase/
