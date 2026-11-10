@@ -1,11 +1,28 @@
 # My Dairy Book — Website
 
-A one-page marketing website plus dedicated legal pages for the **My Dairy Book**
-Android app.
+The public marketing website and legal pages for the **My Dairy Book** Android app.
 
-This is a standalone project. It is **not** part of the Flutter app project and does
-not share its build or dependencies. The only things copied from the app are the
-brand images in `assets/` (app icon, logo, dashboard illustration).
+This is a standalone static project. It does not share the Flutter app's build,
+dependencies, or source. Only the brand images in `assets/` are copied from the app.
+
+## Live site
+
+| Page | URL |
+|---|---|
+| Website | https://my-dairy-book-site.web.app/ |
+| Privacy Policy | https://my-dairy-book-site.web.app/privacy-policy.html |
+| Data Deletion | https://my-dairy-book-site.web.app/data-deletion.html |
+| Terms of Service | https://my-dairy-book-site.web.app/terms-of-service.html |
+| Billing & Refunds | https://my-dairy-book-site.web.app/billing-refunds.html |
+| Cookies | https://my-dairy-book-site.web.app/cookies.html |
+
+Use these URLs in Google Play Console:
+
+- **Privacy policy:** `https://my-dairy-book-site.web.app/privacy-policy.html`
+- **Account/data deletion:** `https://my-dairy-book-site.web.app/data-deletion.html`
+
+Hosting is Firebase Hosting, project `my-dairy-book-site` (Spark plan).
+The app itself uses the separate Firebase project `my-dairy-book`.
 
 ## Files
 
@@ -13,94 +30,55 @@ brand images in `assets/` (app icon, logo, dashboard illustration).
 mydairybook-website/
 ├── index.html              # one-page marketing site (no legal content)
 ├── privacy-policy.html     # dedicated legal page
-├── data-deletion.html      # dedicated legal page (Play Store deletion URL)
+├── data-deletion.html      # dedicated legal page (Play Console deletion URL)
 ├── terms-of-service.html   # dedicated legal page
 ├── billing-refunds.html    # dedicated legal page
 ├── cookies.html            # dedicated legal page
 ├── styles.css              # brand theme, layout and responsive rules
-├── script.js               # mobile menu, scroll animations, contact form, back-to-top
+├── script.js               # mobile menu, scroll animations, contact form
+├── firebase.json           # Firebase Hosting configuration
+├── .firebaserc             # Hosting project: my-dairy-book-site
 ├── assets/
 │   ├── app_icon.png        # favicon, header/footer logo, app icon
-│   ├── dashboard_hero.webp # app hero illustration (optional use)
+│   ├── dashboard_hero.webp # app hero illustration
 │   └── logo.png            # full app logo
 └── README.md
 ```
 
-## Legal pages
+Legal links appear only in the footer of each page. The top navigation and the
+main page contain no legal content or legal links.
 
-The legal content is **not** on the main page. Each document has its own page:
-
-| Page | File | Play Console use |
-|---|---|---|
-| Privacy Policy | `privacy-policy.html` | Privacy policy URL |
-| Data Deletion | `data-deletion.html` | Account/data deletion URL |
-| Terms of Service | `terms-of-service.html` | Website link |
-| Billing & Refunds | `billing-refunds.html` | Website link |
-| Cookies | `cookies.html` | Website link |
-
-These links appear **only in the footer** of every page. The top navigation and the
-main page contain no legal links or legal text.
-
-## How to open it
+## Editing and previewing
 
 No build step is needed.
 
-1. Open this folder in VS Code.
-2. Open `index.html` in a browser, **or** use the VS Code *Live Server* extension
-   (right-click `index.html` → *Open with Live Server*).
-3. Or run a local server from this folder:
+```powershell
+# From this folder
+python -m http.server 8080
+# or
+npx serve .
+```
 
-   ```powershell
-   # Python
-   python -m http.server 8080
+Then open <http://localhost:8080>.
 
-   # Node (if installed)
-   npx serve .
-   ```
+## Deploying
 
-   Then visit <http://localhost:8080>.
+The live site is deployed with Firebase Hosting:
 
-## What is on the main page
+```powershell
+firebase deploy --only hosting --project my-dairy-book-site
+```
 
-- Hero with app mockup, quick features and a “Coming soon” app button
-- Feature grid (collection, rate charts, delivery, farmers/customers, payments,
-  bills, reports, stock, suppliers/staff)
-- How it works in 4 steps
-- Dairy types it is made for
-- 13-language section
-- Security, permissions and a Play-style data-safety summary
-- FAQ
-- App information table (name, platform, price, developer, support email)
-- Contact section with an email form
-- Footer with links to all five legal pages
+The deploy uses `firebase.json` (public folder `.`) and `.firebaserc` (default
+project `my-dairy-book-site`). Do not add secrets, tokens, or private data to this
+folder; everything here becomes public.
 
-## Before you publish
+## Before you publish (verified)
 
-Update these placeholders so every page is accurate:
-
-1. **Contact email** — currently `mydairybook01@gmail.com` in every HTML page
-   (header, policies, contact, footer) and `CONTACT_EMAIL` in `script.js`.
-2. **Developer / legal name** — currently “My Dairy Book”.
-3. **Effective dates** — currently 19 October 2026.
-4. **Google Play URL** — the site currently shows “Coming soon” instead of a
-   Play Store link. When the app is live, replace the “Coming soon” buttons with
-   the store link:
-   `https://play.google.com/store/apps/details?id=com.mydairybook.my_dairy_book`.
-5. **Pricing claims** — the pages say the app is free. Change this if you add
-   paid plans.
-
-## Deploying for Google Play
-
-Google Play requires a public URL for your privacy policy and (if the app creates
-accounts) a public data-deletion URL. You can host this folder for free on:
-
-- **GitHub Pages** — push the folder to a repository, then enable Pages
-  (Settings → Pages → Deploy from branch → root).
-- **Netlify / Vercel** — drag and drop the folder, or connect the repository.
-
-After deploying, use these URLs in Play Console:
-
-- Privacy policy: `https://your-domain.com/privacy-policy.html`
-- Data deletion: `https://your-domain.com/data-deletion.html`
-- Terms of service: `https://your-domain.com/terms-of-service.html`
-- Website: `https://your-domain.com`
+- **Support email:** `mydairybook01@gmail.com` on every page and in `script.js`.
+- **Developer / legal name:** My Dairy Book.
+- **Effective dates:** 19 October 2026.
+- **Google Play:** the site shows **Coming soon**; no Play Store link yet.
+- **Pricing:** the site describes the app as free. Update this if paid plans are added.
+- **Data deletion:** the page documents in-app deletion at
+  **More → Settings → Delete Account**, plus the email fallback.
