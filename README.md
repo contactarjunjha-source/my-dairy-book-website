@@ -78,7 +78,7 @@ folder; everything here becomes public.
 - **Support email:** `mydairybook01@gmail.com` on every page and in `script.js`.
 - **Developer / legal name:** My Dairy Book.
 - **Effective dates:** 19 October 2026.
-- **Google Play:** the site shows **Coming soon**; no Play Store link yet.
+- **Google Play:** all "Get it on Google Play" buttons link to https://play.google.com/store/apps/details?id=com.mydairybook.my_dairy_book
 - **Pricing:** the site describes the app as free. Update this if paid plans are added.
 - **Data deletion:** the page documents in-app deletion at
   **More → Settings → Delete Account**, plus the email fallback.
